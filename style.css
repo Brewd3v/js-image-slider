@@ -1,0 +1,111 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+}
+
+
+h1{
+    margin: 0;
+}
+
+
+.app-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: aquamarine;
+    flex-direction: column;
+}
+
+.app{
+    background-color: white;
+    width: 100%;
+    max-width: 700px;
+    min-height: 400px;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(211, 211, 211, 0.438);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+img{
+    border-radius: 5px;
+    transition: .3s;
+}
+
+button{
+    margin: 15px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0 1px 5px rgba(211, 211, 211, 0.438);
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+
+.arrows {
+    width: 48px;
+    height: 48px;
+    border-color: #000;
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+    cursor: pointer;
+    
+}
+
+.arrows:hover{
+    background: rgba(255, 255, 255, 0.335);
+}
+
+.prev {
+    border-bottom: 6px solid;
+    border-left: 6px solid;
+    transform: rotate(45deg);
+    left: 30px;
+}
+
+.next {
+    border-bottom: 6px solid;
+    border-left: 6px solid;
+    transform: rotate(-135deg);
+    right: 30px;
+}
+
+.slide{
+    display: none;
+}
+
+.active{
+    display: block;
+}
+
+
+/* Fading animation from w3schools - slightly adjusted it*/
+.slide {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 3s;
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .8} 
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .8} 
+    to {opacity: 1}
+}
